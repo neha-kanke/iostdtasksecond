@@ -1,0 +1,17 @@
+
+ <mat-card class="mb-4 alert" *ngFor="let product of getdatformparent" 
+ [ngClass]="{
+    'alert-danger':product.pcategary==='product',
+    'alert-warning':product.pcategary==='catalog'
+ }">
+    <mat-card-title>
+       {{product.ptitle}}
+    </mat-card-title>
+    <mat-card-content>
+    {{product.dproduct}}
+    </mat-card-content>
+    <mat-card-actions  class="d-flex justify-content-between" >
+        <button mat-raised-button color="accent" >edit</button>
+        <button mat-raised-button color="warn">delete</button>
+    </mat-card-actions>
+</mat-card> 
